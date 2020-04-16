@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/view/Home'
+import MovieList from '@/view/MovieList'
+import User from '@/view/User'
 
 Vue.use(Router)
 
@@ -8,8 +10,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'home',
       component: Home
+    },
+    {
+      path: '/movieList',
+      name: 'movieList',
+      component: MovieList
+    },
+    {
+      path: '/user',
+      name: 'user',
+      component: User
     }
   ]
 })

@@ -2,9 +2,9 @@
   <div>
       <div class="navHeader">
             <span>主页</span>
-            <span>电影</span>
+            <span @click="handleToMovieList">电影</span>
             <span>header</span>
-            <span>admin</span>
+            <span @click="handleToMovieList">admin</span>
             <span>退出</span>
       </div>
   </div>
@@ -13,7 +13,14 @@
 <script>
 /* eslint-disable */
 export default {
-    name : 'Header'
+    name : 'Header',
+    methods : {
+        handleToMovieList() {
+            this.$router.push({
+                path: '/movieList'
+            })
+        }
+    }
 }
 </script>
 
