@@ -1,22 +1,25 @@
 <template>
   <div>
       <div class="footer">
-          foote
+          <p>footer-pc</p>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-    name : 'footer'
+    name : 'bottomFooter'
 }
 </script>
 
 <style>
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    height: 30px;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid #ccc;
+    background-color: #000;
 }
 </style>

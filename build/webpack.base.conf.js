@@ -9,14 +9,14 @@ function resolve (dir) {
 }
 
 const createLintingRule = () => ({
-  test: /\.(js|vue)$/,
+  /*test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
   include: [resolve('src'), resolve('test')],
   options: {
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
-  }
+  }*/
 })
 
 module.exports = {
@@ -88,5 +88,11 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
+  },
+  watch: true, // 监听自动刷新
+  watchOptions: {
+    ignored: /node_modules/,
+    aggregateTimeout: 500,  //文件变动后多久发起构建，越大越好
+    poll: 1,  //每秒询问次数，越小越好
   }
 }

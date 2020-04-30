@@ -6,6 +6,8 @@ import User from '@/view/User'
 
 Vue.use(Router)
 
+// todo: 路由按需加载
+
 export default new Router({
   routes: [
     {

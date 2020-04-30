@@ -1,6 +1,6 @@
 <template>
   <div>
-      user
+      use
   </div>
 </template>
 
